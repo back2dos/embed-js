@@ -1,18 +1,18 @@
 {
-  "name": "embed-js",
-  "license": "MIT",
-  "tags": [
-    "js",
-    "embed"
-  ],
-  "classPath": "src",
-  "contributors": [
-    "back2dos"
-  ],
-  "releasenote": "initial release",
-  "version": "0.0.0",
-  "url": "https://github.com/back2dos/embed-js/",
-  "dependencies": {
-    "tink_url": ""
-  }
+	"name": "embed-js",
+	"license": "MIT",
+	"tags": [
+		"js",
+		"embed"
+	],
+	"classPath": "src",
+	"contributors": [
+		"back2dos"
+	],
+	"releasenote": "Initial haxelib release.",
+	"version": "0.1.0",
+	"url": "https://github.com/back2dos/embed-js/",
+	"dependencies": {
+		"tink_url": ""
+	}
 }
