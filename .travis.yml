@@ -20,4 +20,3 @@ install:
 
 script:
   - haxelib run travix js
-  - haxelib run travix node
