@@ -1,0 +1,3 @@
+-D embed-js=dev
+-cp src
+-lib tink_url

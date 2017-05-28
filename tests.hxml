@@ -1,0 +1,4 @@
+-cp tests
+-main RunTests
+-dce full
+--macro embed.Js.from('http://cdnjs.cloudflare.com/ajax/libs/react/15.5.4/react.js')
