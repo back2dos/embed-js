@@ -12,7 +12,6 @@ class Js {
   macro static public function from(source:String, ?pos:IncludePosition) {
     var url:tink.Url = source;
 
-    //trace(root);
     switch url.scheme {
       case 'http': 
       case 'https': throw 'https not supported';
@@ -39,10 +38,10 @@ class Js {
       }
     
     return 
-      switch getPosInfos(currentPos()).file {
-        case '--macro': haxe.macro.Compiler.includeFile(file, pos);
+      if (getPosInfos(currentPos()).file.startsWith('--macro')) {
+        haxe.macro.Compiler.includeFile(file, pos);
         null;
-        case v: macro untyped __js__($v{js});
       }
+      else macro untyped __js__($v{js});
   }
 }
