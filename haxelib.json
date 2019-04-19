@@ -9,8 +9,8 @@
 	"contributors": [
 		"back2dos"
 	],
-	"releasenote": "Initial haxelib release.",
-	"version": "0.1.0",
+	"releasenote": "Fix for Haxe 4.",
+	"version": "0.1.1",
 	"url": "https://github.com/back2dos/embed-js/",
 	"dependencies": {
 		"tink_url": ""
