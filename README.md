@@ -24,5 +24,4 @@ Usage is straightforward:
 ## Remarks
 
 - the downloaded JavaScript files are cached on the file system, with the SHA1 of the URL acting as key. There's currently no way to purge the cache. Most web servers will allow you to add arbitrary query strings to the URL, which you can use to bypass the cache.
-- HTTPS is currently not supported, because the macro interpreter does not support it
-- this library combines rather well with closure, at least to the degree the JavaScript you are embedding is closure compatible.
+- this library combines rather well with [closure](https://developers.google.com/closure/compiler), at least to the degree the JavaScript you are embedding is closure compatible. There's a [haxe library](https://github.com/back2dos/closure) to facilitate closure usage in Haxe.
