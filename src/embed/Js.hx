@@ -14,7 +14,7 @@ class Js {
 
     switch url.scheme {
       case 'http': 
-      case 'https': throw 'https not supported';
+      case 'https': 
       case v: 'Unsupported scheme in $url';
     }
 
