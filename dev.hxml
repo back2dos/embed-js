@@ -1,0 +1,4 @@
+tests.hxml
+-lib travix
+-lib embed-js
+-js bin/dev.js

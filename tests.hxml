@@ -1,4 +1,6 @@
 -cp tests
+-lib hx3compat
 -main RunTests
 -dce full
 --macro embed.Js.from('http://cdnjs.cloudflare.com/ajax/libs/react/15.5.4/react.js')
+--macro embed.Js.from('http://cdnjs.cloudflare.com/ajax/libs/react/15.5.4/react-dom.js')

@@ -13,31 +13,31 @@ class Js {
     var url:tink.Url = source;
 
     switch url.scheme {
-      case 'http': 
-      case 'https': 
+      case 'http':
+      case 'https':
       case v: 'Unsupported scheme in $url';
     }
 
     var here = getPosInfos((macro null).pos).file.replace('\\', '/');
-    var root = switch here.indexOf('embed-js') {
-      case -1: throw 'assert';
-      case v: here.substr(0, v) + 'embed-js/filecache';
+    var root = switch [here.isAbsolute(), here.indexOf('embed-js')] {
+      case [false, -1]: 'filecache';
+      case [_, v]: here.substr(0, v) + 'embed-js/filecache';
     }
 
     if (!root.exists())
       root.createDirectory();
 
     var file = '$root/${haxe.crypto.Sha1.encode(source)}.js';
-    
-    var js = 
+
+    var js =
       if (file.exists()) file.getContent();
       else {
         var ret = haxe.Http.requestUrl(source);
         file.saveContent(ret);
         ret;
       }
-    
-    return 
+
+    return
       if (getPosInfos(currentPos()).file.startsWith('--macro')) {
         haxe.macro.Compiler.includeFile(file, pos);
         null;
