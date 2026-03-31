@@ -9,7 +9,8 @@ using sys.FileSystem;
 using sys.io.File;
 #end
 class Js {
-  macro static public function from(source:String, ?pos:IncludePosition) {
+  #if !macro macro #end
+  static public function from(source:String, ?pos:IncludePosition) {
     var url:tink.Url = source;
 
     switch url.scheme {
